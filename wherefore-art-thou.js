@@ -1,1 +1,35 @@
-{"index.js":"function whatIsInAName(collection, source) {\n    // What's in a name?\n    var arr = [];\n    let sourceKeys = Object.keys(source);\n    let sourceValues = Object.values(source);\n    // Only change code below this line\n    for(let i = 0; i < collection.length; i++) {\n      let objeKeys = Object.keys(collection[i]);\n      let objeValues = Object.values(collection[i]);\n              let count = 0;\n              let count2  = 0;\n        for(let  n = 0; n < sourceKeys.length; n++) {\n             console.log(objeKeys, sourceKeys[n])\n                count2++;\n                \n            if(objeKeys.includes(sourceKeys[n]) && objeValues.includes(sourceValues[n])) {\n                count++;\n            }\n        } \n        console.log(count2, objeKeys)\n\n          if(count === sourceKeys.length) {\n              arr.push(collection[i]);\n          }\n         }\n    \n    \n    \n    // Only change code above this line\n\n    return  arr\n   }\n  \n  \n  whatIsInAName([{\"a\": 1, \"b\": 2, \"c\": 3}], {\"a\": 1, \"b\": 9999, \"c\": 3});"}
+function whatIsInAName(collection, source) {
+    // What's in a name?
+    var arr = [];
+    let sourceKeys = Object.keys(source);
+    let sourceValues = Object.values(source);
+    // Only change code below this line
+    for(let i = 0; i < collection.length; i++) {
+      let objeKeys = Object.keys(collection[i]);
+      let objeValues = Object.values(collection[i]);
+              let count = 0;
+              let count2  = 0;
+        for(let  n = 0; n < sourceKeys.length; n++) {
+             console.log(objeKeys, sourceKeys[n])
+                count2++;
+                
+            if(objeKeys.includes(sourceKeys[n]) && objeValues.includes(sourceValues[n])) {
+                count++;
+            }
+        } 
+        console.log(count2, objeKeys)
+
+          if(count === sourceKeys.length) {
+              arr.push(collection[i]);
+          }
+         }
+    
+    
+    
+    // Only change code above this line
+
+    return  arr
+   }
+  
+  
+  whatIsInAName([{"a": 1, "b": 2, "c": 3}], {"a": 1, "b": 9999, "c": 3});
